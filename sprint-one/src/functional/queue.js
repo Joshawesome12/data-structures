@@ -15,8 +15,6 @@ var Queue = function() {
     var item = someInstance[size];
     delete someInstance[size];
     return item; 
-
-    // size--;
   };
 
   someInstance.size = function() {
@@ -27,4 +25,4 @@ var Queue = function() {
   };
 
   return someInstance;
-};
+};  
