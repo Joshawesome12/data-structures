@@ -6,16 +6,16 @@ var Queue = function() {
   var size = 0;
   // Implement the methods below
   someInstance.enqueue = function(value) {
-    someInstance[size] = value;
+    storage[size] = value;
     size++;
   };
 
   someInstance.dequeue = function() {
-    var item = someInstance[0];
-    delete someInstance[0];
+    var item = storage[0];
+    delete storage[0];
     size--;
     for (var i = 0; i < size; i++) {
-      someInstance[i] = someInstance[i + 1];
+      storage[i] = storage[i + 1];
     }
     return item; 
   };
