@@ -11,9 +11,12 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
+    var item = someInstance[0];
+    delete someInstance[0];
     size--;
-    var item = someInstance[size];
-    delete someInstance[size];
+    for (var i = 0; i < size; i++) {
+      someInstance[i] = someInstance[i + 1];
+    }
     return item; 
   };
 
