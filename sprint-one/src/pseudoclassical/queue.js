@@ -5,12 +5,20 @@ var Queue = function() {
   this.count = 0;
 };
 
-Queue.prototype.queue = function(value) {
+Queue.prototype.enqueue = function(value) {
   this.storage[this.count] = value;
   this.count++;
 };
 
 Queue.prototype.dequeue = function() {
+  if (this.count > 0) {
+    this.count--;
+    var place = this.storage[this.count - this.count];
+    for (var key in this.storage) {
+      this.storage[key - 1] = this.storage[key];
+    }
+    return place;
+  }
   
 };
 
