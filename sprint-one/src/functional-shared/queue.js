@@ -28,5 +28,3 @@ var queueMethods = {
     return this.count;  
   }
 };
-
-
