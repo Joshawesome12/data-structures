@@ -1,12 +1,12 @@
 var Stack = function() {
-  var funcHolder = {
+  var instance = {
     storage: {},
     count: 0
   };
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.  
-  _.extend(funcHolder, stackMethods);
-  return funcHolder;
+  _.extend(instance, stackMethods);
+  return instance;
 };
 
 var stackMethods = {
@@ -18,7 +18,6 @@ var stackMethods = {
     if (this.count > 0) {
       this.count--;
       var place = this.storage[this.count];
-      // delete this.storage[this.count];
       return place;
     }
   },
