@@ -17,9 +17,9 @@ var queueMethods = {
   dequeue: function() {
     if (this.count > 0) {
       this.count--;
-      var place = this.storage[this.count];
+      var place = this.storage[this.count - this.count];
       for (var key in this.storage) {
-        this.storage[key] = this.storage[key];
+        this.storage[key - 1] = this.storage[key];
       } 
       return place;
     }
