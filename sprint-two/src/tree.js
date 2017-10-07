@@ -21,16 +21,11 @@ treeMethods.contains = function(target) {
   if (this.value === target) {
     return true;
   }
-  //.contains() takes any input and returns a boolean reflecting whether it can be found as the value of the target node or any descendant node
+  
   for (var i = 0; i < this.children.length; i++) {
-    if (this.children[i].value === target) {
+    var child = this.children[i];
+    if (child.contains(target) === true) {
       return true;
-    }
-    // tree.children[0].addChild(7);
-    console.log('this.children[i]', this.children[i]);
-    console.log('this.children[i].value', this.children[i].value);
-    if (this.children[i].children !== 0) {
-      // this.contains(this.children[i].children);
     }
   }
   return false;
