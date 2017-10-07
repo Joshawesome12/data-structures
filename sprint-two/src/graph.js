@@ -23,20 +23,15 @@ Graph.prototype.contains = function(node) {
   }
   return tf;
 };
+
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
-  // console.log('node', node);
-  // console.log('this.edges', this.edges);
   for (var i = 0; i < this.edges.length; i++) {
     var edge = this.edges[i];
-    //node = 5
-    //edge || this.edges[i] = [5,4];
-    //edge[0] = 5      edge[1] = 4
     if (edge[0] === node || edge[1] === node) {
       this.edges.splice(edge, 1);
     }
   }
-  console.log('this.edges after filter', this.edges);
   this.nodes = this.nodes.filter(item => item !== node);
 };
 
