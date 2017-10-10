@@ -12,24 +12,20 @@ var BinarySearchTree = function(value) {
 	var newTree = {};
 	newTree.left = null;
 	newTree.right = null;
-	_extend(newTree, treeMethods);
-	return newTree;
 };
 
-var treeMethods = {};
-
-treeMethods.insert = function(value){
+BinarySearchTree.prototype.insert = function(value){
 	var currentValue = 0;
 	if (value > currentValue){
 
 	}
 }
 
-treeMethods.contains = function(target){
+BinarySearchTree.prototype.contains = function(target){
 
 }
 
-treeMethods.depthFirstLog = function(cb){
+BinarySearchTree.prototype.depthFirstLog = function(cb){
 
 }
 
