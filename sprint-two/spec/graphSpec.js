@@ -68,4 +68,7 @@ describe('graph', function() {
     expect(graph.hasEdge(3, 5)).to.equal(true);
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
+  it('should be a function', function() {
+    expect(graph).to.be.a.function;
+  });
 });

@@ -41,4 +41,8 @@ describe('tree', function() {
     expect(tree.contains(8)).to.equal(true);
   });
 
+  it('should be a function', function() {
+    expect(tree).to.be.a.function;
+  });
+
 });

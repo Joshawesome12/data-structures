@@ -73,4 +73,8 @@ describe('hashTable', function() {
     hashTable.remove('Mr.');
     expect(hashTable._limit).to.equal(8);
   });
+
+  it('should be a function', function() {
+    expect(hashTable).to.be.a.function;
+  });
 });

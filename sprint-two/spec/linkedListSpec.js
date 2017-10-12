@@ -52,4 +52,8 @@ describe('linkedList', function() {
   });
 
   // add more tests here to test the functionality of linkedList
+  it('should be a function', function() {
+    expect(linkedList ).to.be.a.function;
+  });
+
 });
